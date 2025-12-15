@@ -1,73 +1,113 @@
-# 8-url-card
+# SPFx Fluent UI Card with Audience Targeting & Dynamic Links
 
-## Summary
+A modern **SPFx web part** featuring a **Fluent UI Card** with:
+- **Right-top image**
+- **Title** in the same row
+- **Description** with a **View More** button
+- **Right-side image**
 
-Short summary on functionality and used technologies.
-
-[picture of the solution in action, if possible]
-
-## Used SharePoint Framework Version
-
-![version](https://img.shields.io/badge/version-1.21.1-green.svg)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
-
-## Version history
-
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
-
-## Disclaimer
-
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+All properties are configurable via the **Property Pane**.
 
 ---
 
-## Minimal Path to Awesome
+## ✨ Features
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
+- **Audience Targeting**:
+  - Active Directory (AD) Groups
+  - Microsoft 365 Groups
+  - Direct Users
+- **Dynamic Links**:
+  - Up to **8 configurable buttons** using `PropertyFieldCollectionData`
+  - Each button includes **Text**, **Icon**, and **URL**
+- Clicking **Description** or **View More** opens a **right-side Panel** listing all configured buttons.
+- Clicking a button navigates to its respective link.
 
-> Include any additional steps as needed.
+---
 
-## Features
+## 🖼️ Screenshots
 
-Description of the extension that expands upon high-level summary above.
+### Card View
+![Card View](src/webparts/rightSideButtonPane/assets/Card.png)
 
-This extension illustrates the following concepts:
+### Right Popup Panel
+![Right Popup](src/webparts/rightSideButtonPane/assets/Right_Popup.png)
 
-- topic 1
-- topic 2
-- topic 3
+### Properties Panel
+![Properties Panel](src/webparts/rightSideButtonPane/assets/Properties_panel.png)
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+---
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+## 🧰 Tech Stack
 
-## References
+- **SharePoint Framework (SPFx)**: `1.21.1`
+- **React**: `17.0.1`
+- **Fluent UI (React v8)**: `^8.125.1`
+- **TypeScript**: `~5.3.3`
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+---
+
+## ✅ Prerequisites
+
+- Node.js (Recommended: **18.x LTS**)
+- Gulp CLI
+- Office 365 tenant with App Catalog
+
+---
+
+## 🚀 Getting Started
+
+```bash
+npm install
+gulp trust-dev-cert
+gulp serve
+```
+
+Open local or SharePoint workbench to test.
+
+---
+
+## ⚙️ Property Pane Configuration
+
+- **Card Properties**:
+  - Title
+  - Description
+  - Right-top Image URL
+  - Right-side Image URL
+- **Audience Targeting**:
+  - AD Group
+  - M365 Group
+  - Direct Users
+- **Dynamic Buttons**:
+  - Configure up to 8 buttons using `PropertyFieldCollectionData`
+
+Example JSON:
+```json
+{
+  "title": "Resources",
+  "description": "Quick links for your team",
+  "rightTopImage": "https://contoso.com/top-image.png",
+  "rightSideImage": "https://contoso.com/side-image.png",
+  "audience": ["GroupID", "UserPrincipalName"],
+  "buttons": [
+    {"text": "Portal", "icon": "Globe", "url": "https://portal.contoso.com"},
+    {"text": "Helpdesk", "icon": "Help", "url": "https://help.contoso.com"}
+  ]
+}
+```
+
+---
+
+## 🏗️ Build & Deploy
+
+```bash
+gulp bundle --ship
+gulp package-solution --ship
+```
+
+Upload `.sppkg` to App Catalog and deploy.
+
+---
+
+## 📄 License
+
+MIT License
