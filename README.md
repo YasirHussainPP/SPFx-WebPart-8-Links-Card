@@ -30,7 +30,7 @@ All properties are configurable via the **Property Pane**.
 ![Card View](src/webparts/rightPanelCard/assets/Card.png)
 
 ### Right Popup Panel
-![Right Popup](src/webparts/rightPanelCard/assets/Right_Popup.png)
+![Right Popup](src/webparts/rightPanelCard/assets/Right_Panel.png)
 
 ### Properties Panel
 ![Properties Panel](src/webparts/rightPanelCard/assets/Properties_panel.png)
