@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "right-panel-card-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/rightPanelCard/RightPanelCardWebPart.js",
+          "manifest": "./src/webparts/rightPanelCard/RightPanelCardWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "RightPanelCardWebPartStrings": "lib/webparts/rightPanelCard/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

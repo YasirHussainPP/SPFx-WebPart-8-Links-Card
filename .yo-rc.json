@@ -1,0 +1,18 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.0",
+    "sdksVersions": {},
+    "version": "1.21.1",
+    "libraryName": "8-url-card",
+    "libraryId": "051798ce-4a33-4e61-a8f9-9b6f8ae25116",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "8-url-card",
+    "solutionShortDescription": "8-url-card description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

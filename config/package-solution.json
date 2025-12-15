@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "8-url-card-client-side-solution",
+    "id": "051798ce-4a33-4e61-a8f9-9b6f8ae25116",
+    "version": "1.0.0.1",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "8-url-card description"
+      },
+      "longDescription": {
+        "default": "8-url-card description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Group.Read.All"
+      }
+    ],
+    "features": [
+      {
+        "title": "8-url-card Feature",
+        "description": "The feature that activates elements of the 8-url-card solution.",
+        "id": "4e2b425b-27dd-45e2-be5e-0b38ca275243",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/8-url-card.sppkg"
+  }
+}

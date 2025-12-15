@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "d9d71070-0edc-4368-afdf-e7dee7b91632",
+  "alias": "RightPanelCardWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Advanced" },
+    "title": { "default": "RightPanelCard" },
+    "description": { "default": "RightPanelCard description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "cardSize": "large",
+      "title": "M365 Apps",
+      "description": "PowerPoint\n+ 8 more",
+      "iconUrl": "https://images.seeklogo.com/logo-png/46/1/microsoft-365-logo-png_seeklogo-465813.png",
+      "rightImageUrl": "https://hunari.de/wp-content/uploads/2023/03/Microsoft365-Logo.png",
+      "viewMoreLabel": "View more",
+      "panelTitle": "Apps",
+      "panelSubText": "Quick links",
+      "panelActions": [
+        { "label": "PowerPoint", "iconName": "PowerPointLogo", "url": "https://www.office.com/launch/powerpoint", "openInNewTab": true },
+        { "label": "Excel", "iconName": "ExcelLogo", "url": "https://www.office.com/launch/excel", "openInNewTab": true }
+      ]
+
+    }
+  }]
+}
