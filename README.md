@@ -27,7 +27,7 @@ All properties are configurable via the **Property Pane**.
 ## 🖼️ Screenshots
 
 ### Card View
-![Card View](src/webparts/rightSideButtonPane/assets/Card.png)
+![Card View](src/webparts/rightPanelCard/assets/Card.png)
 
 ### Right Popup Panel
 ![Right Popup](src/webparts/rightSideButtonPane/assets/Right_Popup.png)
